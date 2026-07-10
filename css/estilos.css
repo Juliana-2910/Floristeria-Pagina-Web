@@ -482,7 +482,28 @@ header{
 
 ====================================================*/
 
+:root{
 
+    /* Paleta de colores */
+
+    --color-principal:#D46A92;
+    --color-secundario:#F8DDE8;
+    --color-acento:#F4A8C4;
+    --color-fondo:#FFF8FB;
+    --color-blanco:#FFFFFF;
+    --color-texto:#ffffff;
+    --color-gris:#ffffff;
+
+    /* Tipografías */
+
+    --titulo:'Playfair Display', serif;
+    --texto:'Poppins', sans-serif;
+
+    /* Sombras */
+
+    --sombra:0 8px 20px rgba(0,0,0,.10);
+
+}
 
 
 

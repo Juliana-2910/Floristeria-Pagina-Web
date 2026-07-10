@@ -1,0 +1,182 @@
+/*==================================================
+
+                1. VARIABLES
+                Sprint 2
+
+====================================================*/
+
+:root{
+
+    /* Paleta de colores */
+
+    --color-principal:#D46A92;
+    --color-secundario:#F8DDE8;
+    --color-acento:#F4A8C4;
+    --color-fondo:#FFF8FB;
+    --color-blanco:#FFFFFF;
+    --color-texto:#4B3B47;
+    --color-gris:#777777;
+
+    /* Tipografías */
+
+    --titulo:'Playfair Display', serif;
+    --texto:'Poppins', sans-serif;
+
+    /* Sombras */
+
+    --sombra:0 8px 20px rgba(0,0,0,.10);
+
+}
+
+
+
+/*==================================================
+
+                2. RESET
+                Sprint 2
+
+====================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--texto);
+    background:var(--color-fondo);
+    color:var(--color-texto);
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+
+/*==================================================
+
+            3. ESTILOS GENERALES
+                Sprint 2
+
+====================================================*/
+
+.contenedor{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+section{
+
+    padding:80px 0;
+
+}
+
+h1,h2,h3{
+
+    font-family:var(--titulo);
+
+}
+
+
+
+/*==================================================
+
+                4. HEADER
+                Sprint 2
+
+====================================================*/
+
+/*=========================================
+        HEADER
+=========================================*/
+
+.header{
+
+    width:100%;                   /* El encabezado ocupa todo el ancho de la pantalla */
+
+    background:#ffffff;           /* Fondo blanco del encabezado */
+
+    padding:20px 0;               /* Espaciado superior e inferior */
+
+}
+
+
+/*=========================================
+        CONTENEDOR DEL HEADER
+=========================================*/
+
+.contenedor{
+
+    width:90%;                    /* El contenido ocupa el 90% del ancho */
+
+    max-width:1200px;             /* Limita el ancho máximo */
+
+    margin:0 auto;                /* Centra el contenedor */
+
+    display:flex;                 /* Coloca logo y menú en una misma fila */
+
+    justify-content:space-between;/* Logo a la izquierda y menú a la derecha */
+
+    align-items:center;           /* Centra verticalmente los elementos */
+
+}
+
+
+/*=========================================
+        LOGO
+=========================================*/
+
+.logo{
+
+    display:flex;                 /* Permite alinear correctamente el logo */
+
+    align-items:center;           /* Centra verticalmente el logo */
+
+    gap:10px;                     /* Espacio si en el futuro agregas texto al lado del logo */
+
+}
+
+
+/*=========================================
+        IMAGEN DEL LOGO
+=========================================*/
+
+.logo img{
+
+    width:120px;                  /* Ancho del logo */
+
+    height:auto;                  /* Conserva la proporción */
+
+    display:block;                /* Elimina espacios debajo de la imagen */
+
+}
