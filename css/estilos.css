@@ -1,105 +1,367 @@
 /*==================================================
-    FLOWERS SOFT
+
+                FLOWERS SOFT
     Proyecto desarrollado con HTML5 y CSS3
-    Autor: Equipo Flowers Soft
-==================================================*/
 
-/*==================================================
-    1. ESTILOS GENERALES
-==================================================*/
-
-/* Variables de colores */
-
-
-
-
-/* Reset CSS */
-
-
-
-
-/* Estilos generales del body */
-
-
-
-
-/* Tipografía */
-
-
+====================================================*/
 
 
 /*==================================================
-    2. HEADER
-==================================================*/
 
+                1. VARIABLES
+                Sprint 2
 
+====================================================*/
 
+:root{
 
+    /* Paleta de colores */
 
+    --color-principal:#D46A92;
+    --color-secundario:#F8DDE8;
+    --color-acento:#F4A8C4;
+    --color-fondo:#FFF8FB;
+    --color-blanco:#FFFFFF;
+    --color-texto:#4B3B47;
+    --color-gris:#777777;
 
-/*==================================================
-    3. BANNER PRINCIPAL
-==================================================*/
+    /* Tipografías */
 
+    --titulo:'Playfair Display', serif;
+    --texto:'Poppins', sans-serif;
 
+    /* Sombras */
 
+    --sombra:0 8px 20px rgba(0,0,0,.10);
+
+}
 
 
 
 /*==================================================
-    4. NOSOTROS
-==================================================*/
 
+                2. RESET
+                Sprint 2
+
+====================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--texto);
+    background:var(--color-fondo);
+    color:var(--color-texto);
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+
+/*==================================================
+
+            3. ESTILOS GENERALES
+                Sprint 2
+
+====================================================*/
+
+.contenedor{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+section{
+
+    padding:80px 0;
+
+}
+
+h1,h2,h3{
+
+    font-family:var(--titulo);
+
+}
+
+
+
+/*==================================================
+
+                4. HEADER
+                Sprint 2
+
+====================================================*/
+
+.header{
+
+    width:100%;
+    background:var(--color-blanco);
+    box-shadow:var(--sombra);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+
+}
+
+.header .contenedor{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:90px;
+
+}
+
+.logo img{
+
+    width:170px;
+
+}
+
+
+
+/*==================================================
+
+                5. MENÚ
+                Sprint 2
+
+====================================================*/
+
+.menu ul{
+
+    display:flex;
+    gap:35px;
+
+}
+
+.menu a{
+
+    color:var(--color-texto);
+    font-size:16px;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:var(--color-principal);
+
+}
+
+
+
+/*==================================================
+
+                6. BANNER
+                Sprint 2
+
+====================================================*/
+
+.banner{
+
+    padding-top:150px;
+    min-height:100vh;
+
+}
+
+.contenedor-banner{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+
+}
+
+.banner-texto h1{
+
+    font-size:65px;
+    color:var(--color-principal);
+    margin-bottom:15px;
+
+}
+
+.banner-texto h2{
+
+    font-size:35px;
+    margin-bottom:25px;
+
+}
+
+.banner-texto p{
+
+    font-size:18px;
+    color:var(--color-gris);
+    line-height:30px;
+    margin-bottom:35px;
+
+}
+
+.banner-imagen img{
+
+    border-radius:20px;
+    box-shadow:var(--sombra);
+
+}
+
+
+
+/*==================================================
+
+                7. BOTONES
+                Sprint 2
+
+====================================================*/
+
+.botones{
+
+    display:flex;
+    gap:20px;
+
+}
+
+.btn-principal{
+
+    background:var(--color-principal);
+    color:white;
+    padding:15px 35px;
+    border-radius:40px;
+    transition:.4s;
+
+}
+
+.btn-principal:hover{
+
+    background:var(--color-acento);
+
+}
+
+.btn-secundario{
+
+    border:2px solid var(--color-principal);
+    color:var(--color-principal);
+    padding:15px 35px;
+    border-radius:40px;
+    transition:.4s;
+
+}
+
+.btn-secundario:hover{
+
+    background:var(--color-principal);
+    color:white;
+
+}
+
+
+
+/*==================================================
+
+                8. NOSOTROS
+                Sprint 3
+
+====================================================*/
 
 
 
 
 
 /*==================================================
-    5. SERVICIOS
-==================================================*/
 
+                9. SERVICIOS
+                Sprint 4
 
-
-
-
-
-/*==================================================
-    6. CATÁLOGO
-==================================================*/
-
+====================================================*/
 
 
 
 
 
 /*==================================================
-    7. GALERÍA
-==================================================*/
 
+                10. CATÁLOGO
+                Sprint 5
 
-
-
-
-
-/*==================================================
-    8. CONTACTO
-==================================================*/
-
+====================================================*/
 
 
 
 
 
 /*==================================================
-    9. FOOTER
-==================================================*/
 
+                11. GALERÍA
+                Sprint 6
+
+====================================================*/
 
 
 
 
 
 /*==================================================
-    10. RESPONSIVE
-==================================================*/
+
+                12. CONTACTO
+                Sprint 7
+
+====================================================*/
+
+
+
+
+
+/*==================================================
+
+                13. FOOTER
+                Sprint 7
+
+====================================================*/
+
+
+
+
+
+/*==================================================
+
+                14. RESPONSIVE
+                Sprint 8
+
+====================================================*/
