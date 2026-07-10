@@ -163,25 +163,31 @@ header{
 
 ====================================================*/
 
-.menu ul{
+nav ul{
 
-    display:flex;
-    gap:35px;
+display:flex;
 
-}
+gap:25px;
 
-.menu a{
-
-    color:var(--color-texto);
-    font-size:16px;
-    font-weight:500;
-    transition:.3s;
+list-style:none;
 
 }
 
-.menu a:hover{
+nav a{
 
-    color:var(--color-principal);
+text-decoration:none;
+
+color:#555;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#D4AF37;
 
 }
 
