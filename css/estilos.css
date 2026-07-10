@@ -296,14 +296,86 @@ h1,h2,h3{
 /*==================================================
 
                 8. NOSOTROS
-                Sprint 3
 
 ====================================================*/
+.tarjetas-nosotros{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
 
+.tarjeta{
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
 
+.tarjeta h3{
+    color: var(--color-principal);
+    font-family: var(--titulo);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
+.tarjeta p,
+.tarjeta li{
+    color: var(--color-texto);
+    line-height: 28px;
+}
 
+.tarjeta ul{
+    list-style: none;
+    padding: 0;
+}
 
+/* Responsive para celulares */
+@media (max-width: 900px){
+    .tarjetas-nosotros{
+        grid-template-columns: 1fr;
+    }
+}
+
+.banner-nosotros{
+    background: #F8DDE8;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-nosotros{
+    width: 100%;
+    text-align: center;
+}
+
+.contenido-nosotros h1{
+    color: #D46A92;
+    font-size: 60px;
+    text-align: center;
+}
+
+.banner-nosotros{
+    background: #F8DDE8;
+    height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flor-derecha{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 180px;
+}
 /*==================================================
 
                 9. SERVICIOS
