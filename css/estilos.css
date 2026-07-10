@@ -124,30 +124,33 @@ h1,h2,h3{
 
 ====================================================*/
 
-.header{
+header{
 
-    width:100%;
-    background:var(--color-blanco);
-    box-shadow:var(--sombra);
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1000;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:white;
 
 }
 
-.header .contenedor{
+.logo{
 
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
-    height:90px;
+
+    gap:10px;
 
 }
 
 .logo img{
 
-    width:170px;
+    width:100px;
 
 }
 
@@ -155,32 +158,112 @@ h1,h2,h3{
 
 /*==================================================
 
-                5. MENÚ
+                5. MENÚ - ESTILOS Y EFECTO HOVER
                 Sprint 2
 
 ====================================================*/
+/*=========================================
+        HEADER
+=========================================*/
+
+.header{
+    width:100%;
+    background:#ffffff;
+    padding:20px 0;
+}
+
+
+/*=========================================
+        CONTENEDOR DEL HEADER
+=========================================*/
+
+.contenedor{
+
+    width:90%;                    /* El encabezado ocupa el 90% del ancho de la pantalla */
+
+    max-width:1200px;             /* Evita que el contenido sea demasiado ancho */
+
+    margin:0 auto;                /* Centra el contenedor horizontalmente */
+
+    display:flex;                 /* Coloca logo y menú en una misma fila */
+
+    justify-content:space-between;/* Logo a la izquierda y menú a la derecha */
+
+    align-items:center;           /* Centra verticalmente los elementos */
+
+}
+
+/*=========================================
+        LOGO
+=========================================*/
+
+.logo img{
+
+    width:120px;      /* Tamaño del logo */
+
+    height:auto;      /* Conserva la proporción */
+
+    display:block;    /* Elimina espacios innecesarios */
+
+}
+
+/*=========================================
+        MENÚ
+=========================================*/
 
 .menu ul{
 
-    display:flex;
-    gap:35px;
+    display:flex;         /* Coloca las opciones horizontalmente */
+
+    gap:35px;             /* Espacio entre opciones */
+
+    list-style:none;      /* Elimina las viñetas */
+
+    margin:0;
+
+    padding:0;
 
 }
+
+/*=========================================
+        ENLACES
+=========================================*/
 
 .menu a{
 
-    color:var(--color-texto);
-    font-size:16px;
-    font-weight:500;
-    transition:.3s;
+    text-decoration:none;
+
+    color:#333;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:0.3s;
 
 }
+
+/*=========================================
+        HOVER
+=========================================*/
 
 .menu a:hover{
 
-    color:var(--color-principal);
+    color:#D46B9D;
 
 }
+
+/*=========================================
+            HEADER del Banner
+=========================================*/
+
+.header{
+    width: 100%;
+    background: #ffffff;   /* Fondo blanco */
+    position: relative;
+    z-index: 1000;         /* Siempre queda por encima del banner */
+}
+
 
 
 
@@ -191,106 +274,194 @@ h1,h2,h3{
 
 ====================================================*/
 
+
 .banner{
 
-    padding-top:150px;
-    min-height:100vh;
+    background-image: url("../img/Banner.jpg");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+    min-height: 700px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 80px 10%;
 
 }
 
-.contenedor-banner{
+/* TEXTO */
 
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+.banner-texto{
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:50px;
+    width:45%;
 
 }
+
+/*=========================================
+        TÍTULO PRINCIPAL SOBRE EL BANNER
+=========================================*/
 
 .banner-texto h1{
 
-    font-size:65px;
-    color:var(--color-principal);
-    margin-bottom:15px;
+    font-size: 70px;
+
+    color: #D46A96;
+
+    margin-bottom: 20px;
+
+    /* Contorno del texto */
+    -webkit-text-stroke: 0,5px #FFFFFF;
+
+    /* Sombra del texto */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
 
 }
 
 .banner-texto h2{
 
-    font-size:35px;
+    font-size:45px;
+
+    color:#ffffff;
+
     margin-bottom:25px;
+
+     /* Sombra del texto */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
 
 }
 
 .banner-texto p{
 
-    font-size:18px;
-    color:var(--color-gris);
-    line-height:30px;
-    margin-bottom:35px;
+    font-size:26px;
+
+    color:#ffffff;
+
+    line-height:45px;
+
+    margin-bottom:45px;
+
+        /* Sombra del texto */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/*=========================================
+        CONTENEDOR DE BOTONES
+=========================================*/
+
+.botones{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+/*=========================================
+        BOTÓN PRINCIPAL
+=========================================*/
+
+.btn{
+
+    background:#D46A96;
+
+    color:white;
+
+    padding:18px 45px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    transition:.3s;
+
+    /* Sombra del botón */
+    box-shadow:0px 6px 15px rgba(0,0,0,.20);
+
+}
+
+.btn:hover{
+
+    background:#B54E79;
+
+    /* La sombra aumenta al pasar el cursor */
+    box-shadow:0px 10px 20px rgba(0,0,0,.30);
+
+}
+
+
+/*=========================================
+        BOTÓN SECUNDARIO
+=========================================*/
+
+.btn2{
+
+    border:2px solid #D46A96;
+
+    color:#D46A96;
+
+    padding:18px 45px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    transition:.3s;
+
+    /* Sombra del botón */
+    box-shadow:0px 6px 15px rgba(0,0,0,.20);
+
+}
+
+.btn2:hover{
+
+    background:#D46A96;
+
+    color:white;
+
+    /* La sombra aumenta al pasar el cursor */
+    box-shadow:0px 10px 20px rgba(0,0,0,.30);
+
+}
+
+
+/* IMAGEN */
+
+.banner-imagen{
+
+    width:55%;
+
+    display:flex;
+
+    justify-content:flex-end;
 
 }
 
 .banner-imagen img{
 
-    border-radius:20px;
-    box-shadow:var(--sombra);
+    width:100%;
+
+    max-width:820px;
+
+    border-radius:25px;
+
+    box-shadow:0px 15px 40px rgba(0,0,0,.15);
 
 }
-
-
-
-/*==================================================
-
-                7. BOTONES
-                Sprint 2
-
-====================================================*/
-
-.botones{
-
-    display:flex;
-    gap:20px;
-
-}
-
-.btn-principal{
-
-    background:var(--color-principal);
-    color:white;
-    padding:15px 35px;
-    border-radius:40px;
-    transition:.4s;
-
-}
-
-.btn-principal:hover{
-
-    background:var(--color-acento);
-
-}
-
-.btn-secundario{
-
-    border:2px solid var(--color-principal);
-    color:var(--color-principal);
-    padding:15px 35px;
-    border-radius:40px;
-    transition:.4s;
-
-}
-
-.btn-secundario:hover{
-
-    background:var(--color-principal);
-    color:white;
-
-}
-
 
 
 /*==================================================
