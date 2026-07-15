@@ -385,6 +385,191 @@ header{
 
 
 /* 3. SERVICIOS */
+/* BANNER */
+.banner-servicios{
+    width:100%;
+    height:160px;
+    background:linear-gradient(135deg,#F8DDE8);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(212,106,146,.20);
+}
+
+/* TÍTULO */
+.titulo-servicios{
+    margin-left:80px;
+}
+
+.titulo-servicios h1{
+    font-family:var(--titulo);
+    font-size:90px;
+    color:#D46A92;
+    margin:0;
+    text-shadow:2px 3px 8px rgba(0,0,0,.10);
+}
+
+/* MENÚ */
+.menu-servicios{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    margin-left:auto;
+    margin-right:200px;
+}
+
+.menu-servicios a{
+    font-family:var(--texto);
+    color:#4B3B47;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu-servicios a:hover{
+    color:#D46A92;
+    transform:translateY(-3px);
+}
+
+/* FLOR */
+.banner-servicios .flor-derecha{
+    position:absolute;
+    right:40px;
+    bottom:0;
+    width:160px;
+    margin-right:50px;
+    filter:drop-shadow(0 8px 15px rgba(0,0,0,.20));
+}
+
+/* INTRODUCCIÓN */
+.introduccion-servicios{
+    width:90%;
+    max-width:1200px;
+    margin:-20px auto 50px;
+    text-align:center;
+}
+
+.introduccion-servicios h2{
+    font-family:var(--titulo);
+    color:#D46A92;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.introduccion-servicios p{
+    font-family:var(--texto);
+    color:#4B3B47;
+    font-size:20px;
+    line-height:32px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* CONTENEDOR */
+.contenedor-servicios{
+    width:90%;
+    max-width:1200px;
+    margin:-170px auto 70px;  /* Ajusta el margen superior para que las tarjetas se superpongan ligeramente con la introducción */
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/* TARJETAS */
+.card-servicio{
+    background:#FFFFFF;
+    border-radius:25px;
+    overflow:hidden;
+    border-top:5px solid #F4A8C4;
+    box-shadow:0 10px 25px rgba(212,106,146,.15);
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.card-servicio:hover{
+    transform:translateY(-10px);
+}
+
+/* IMAGEN */
+.card-servicio img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+/* INFORMACIÓN */
+.info-servicio{
+    padding:30px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.info-servicio h3{
+    font-family:var(--titulo);
+    color:#D46A92;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.info-servicio p{
+    font-family:var(--texto);
+    color:#4B3B47;
+    font-size:20px;
+    line-height:30px;
+    margin-bottom:25px;
+    flex:1;
+}
+
+/* BOTÓN */
+.btn-servicio{
+    background:#D46A96;
+    color:#FFFFFF;
+    padding:15px 35px;
+    border-radius:40px;
+    font-family:var(--texto);
+    font-size:18px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+    align-self:center;
+    box-shadow:0 6px 15px rgba(0,0,0,.20);
+}
+
+.btn-servicio:hover{
+    background:#B54E79;
+    box-shadow:0 10px 20px rgba(0,0,0,.30);
+}
+
+/* RESPONSIVE */
+@media(max-width:950px){
+    .contenedor-servicios{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px){
+    .contenedor-servicios{
+        grid-template-columns:1fr;
+    }
+
+    .titulo-servicios h1{
+        font-size:55px;
+    }
+
+    .introduccion-servicios h2{
+        font-size:40px;
+    }
+
+    .info-servicio h3{
+        font-size:32px;
+    }
+}
 
 /* 4. CATÁLOGO */
 
