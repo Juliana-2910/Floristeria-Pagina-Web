@@ -497,7 +497,7 @@ header{
 /* IMAGEN */
 .card-servicio img{
     width:100%;
-    height:250px;
+    height:320px;
     object-fit:cover;
 }
 
@@ -574,113 +574,153 @@ header{
 /* 4. CATÁLOGO */
 /* BANNER */
 .banner-catalogo{
-    background: #f6dce5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    box-shadow: 0 8px 20px rgba(212, 106, 146, 0.25);
-
+    width:100%;
+    height:160px;
+    background:linear-gradient(135deg,#F8DDE8);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(212,106,146,.20);
 }
 
 /* TÍTULO */
+.titulo-catalogo{
+    margin-left:80px;
+}
 
 .titulo-catalogo h1{
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    color: #d46a92;
-    margin: 0;
+    font-family:var(--titulo);
+    font-size:90px;
+    color:#D46A92;
+    margin:0;
+    text-shadow:2px 3px 8px rgba(0,0,0,.10);
 }
 
 /* MENÚ */
-
 .menu-catalogo{
-    display: flex;
-    gap: 40px;
+    display:flex;
+    align-items:center;
+    gap:35px;
+    margin-left:auto;
+    margin-right:200px;
 }
 
 .menu-catalogo a{
-    text-decoration: none;
-    color: #4B3B47;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-family:var(--texto);
+    color:#4B3B47;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .menu-catalogo a:hover{
-    color: #d46a92;
+    color:#D46A92;
+    transform:translateY(-3px);
 }
 
 /* MARGARITA */
 
 .flor-derecha{
-    width: 150px;
-    height: auto;
-    position: static; /* o elimina la propiedad position */
-    margin: 0;
+    position:absolute;
+    right:40px;
+    bottom:0;
+    width:160px;
+    margin-right:50px;
+    filter:drop-shadow(0 8px 15px rgba(0,0,0,.20));
 }
 
 /* DESCRIPCIÓN */
 
 .introduccion-catalogo{
-    text-align: center;
-    padding: 30px 40px 5px;
-    margin: 0;
+    width:90%;
+    max-width:1200px;
+    margin:-20px auto 50px;
+    text-align:center;
+}
+
+.introduccion-catalogo h2{
+    font-family:var(--titulo);
+    color:#D46A92;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.introduccion-catalogo p{
+    font-family:var(--texto);
+    color:#4B3B47;
+    font-size:20px;
+    line-height:32px;
+    max-width:1100px;
+    margin:auto;
 }
 
 /* CONTENEDOR DE LAS CARDS */
 .catalogo{
-    width: 90%;
-    margin: 10px auto 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
+    width:90%;
+    max-width:1200px;
+    margin:-170px auto 70px;  /* Ajusta el margen superior para que las tarjetas se superpongan ligeramente con la introducción */
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+    align-items:stretch;
 }
 
 
 /* CARD */
 .producto{
     background: #ffffff;
-    border-radius: 25px;
+    border-radius: 25px; 
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(212,106,146,0.2);
+    border-top:5px solid #F4A8C4;
+    box-shadow:0 10px 25px rgba(212,106,146,.15); 
     text-align: center;
     padding-bottom: 25px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; 
+    display:flex;
+    flex-direction:column;
+    height:100%;
 }
 
 .producto:hover{
     transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(212,106,146,0.35);
 }
 
 /* IMAGEN */
 .producto img{
     width: 100%;
-    height: 250px;
+    height: 500px; 
     object-fit: cover;
+    display:block;
 }
 
 /* TÍTULO */
 .producto h3{
-    font-family: 'Playfair Display', serif;
-    color: #d46a92;
-    font-size: 2rem;
-    margin: 20px 15px 10px;
+    font-family:var(--titulo);
+    color:#D46A92;
+    font-size:2rem;
+    margin:20px auto 10px;
+    width:85%;
 }
 
 /* DESCRIPCIÓN */
 .producto p{
-    font-family: 'Poppins', sans-serif;
-    color: #4B3B47;
-    font-size: 1rem;
-    margin: 0 20px 20px;
-    line-height: 1.6;
+    font-family:var(--texto);
+    color:#4B3B47;
+    font-size:20px;
+    line-height:30px;
+    width:85%;
+    margin:0 auto 25px;
+    text-align:center;
+    flex:1;
 }
 
 /* PRECIO */
 .producto span{
     display: block;
-    font-size: 2rem;
+    font-size: 30px;
     font-weight: bold;
     color: #7A9E7E;
     margin-bottom: 20px;
@@ -688,21 +728,26 @@ header{
 
 /* BOTÓN */
 .boton{
-    display: inline-block;
-    background: #d46a92;
-    color: white;
+    background: #D46A96;
+    color: #ffffff;
     text-decoration: none;
-    padding: 14px 30px;
-    border-radius: 30px;
+    padding: 15px 35px;
+    border-radius: 40px;
     font-weight: 600;
     transition: 0.3s;
+    margin-top: auto;
+    align-self: center;
+    box-shadow:0 6px 15px rgba(0,0,0,.20);
+    font-family:var(--texto);
+    font-size:18px;
 }
 
 .boton:hover{
-    background: #c25583;
-     transform: scale(1.05);
-    box-shadow: 0 8px 18px rgba(212, 106, 146, 0.45);
+    background:#B54E79;
+    box-shadow:0 10px 20px rgba(0,0,0,.30);
 }
+
+
 /* 5. GALERÍA */
 
 /* 6. CONTACTO */
