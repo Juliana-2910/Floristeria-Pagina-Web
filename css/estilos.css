@@ -747,8 +747,171 @@ header{
     box-shadow:0 10px 20px rgba(0,0,0,.30);
 }
 
-
 /* 5. GALERÍA */
+/* BANNER */
+.banner-galeria{
+    width:100%;
+    height:160px;
+    background:linear-gradient(135deg,#F8DDE8);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(212,106,146,.20);
+}
+
+/* LOGO */
+.logo-banner{
+    margin-left:80px;
+}
+
+.logo-banner h2{
+    font-family:var(--titulo);
+    font-size:90px;
+    color:#D46A92;
+    margin:0;
+    text-shadow:2px 3px 8px rgba(0,0,0,.10);
+}
+
+/*MENÚ */
+.menu-galeria{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    margin-left:auto;
+    margin-right:200px;
+}
+
+.menu-galeria a{
+    font-family:var(--texto);
+    color:#4B3B47;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu-galeria a:hover{
+    color:#D46A92;
+    transform:translateY(-3px);
+}
+
+/*FLOR */
+.flor-derecha{
+    position:absolute;
+    right:40px;
+    bottom:0;
+    width:160px;
+    margin-right:50px;
+    filter:drop-shadow(0 8px 15px rgba(0,0,0,.20));
+}
+
+/* TEXTO */
+.contenido-banner{
+    width:90%;
+    max-width:1200px;
+    margin:-20px auto 50px;
+    text-align:center;
+}
+
+.contenido-banner h1{
+    font-family:var(--titulo);
+    color:#D46A92;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.contenido-banner p{
+    font-family:var(--texto);
+    color:#4B3B47;
+    font-size:20px;
+    line-height:32px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* GALERÍA */
+.galeria-floral{
+    width:90%;
+    max-width:1200px;
+    margin:-170px auto 70px;
+    margin:auto;
+    padding-bottom:80px;
+}
+
+.galeria{
+    display:grid;
+    margin:-170px auto 70px;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+/* TARJETAS */
+.item{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(212,106,146,.15);
+    transition:.35s;
+}
+
+.item img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(212,106,146,.25);
+}
+
+.item:hover img{
+    transform:scale(1.08);
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .galeria{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .logo-banner h2{
+        font-size:60px;
+    }
+}
+
+@media(max-width:768px){
+    .banner-galeria{
+        flex-direction:column;
+        justify-content:center;
+        height:auto;
+        padding:30px 5%;
+    }
+
+    .menu-galeria{
+        margin:25px 0 0;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .flor-derecha{
+        width:100px;
+        right:10px;
+    }
+
+    .contenido-banner h1{
+        font-size:40px;
+    }
+
+    .galeria{
+        grid-template-columns:1fr;
+    }
+}
+
 
 /* 6. CONTACTO */
 
